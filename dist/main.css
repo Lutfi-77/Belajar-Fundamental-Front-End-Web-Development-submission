@@ -1,0 +1,322 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  width: 100%;
+  background-color: #141414;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* main {
+  width: 100%;
+  height: 100%;
+} */
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  position: relative;
+}
+
+.container {
+  margin: 0 20px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.nav-logo img {
+  width: 80px;
+}
+
+.nav-link {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  position: absolute;
+  right: -200px;
+  top: 55px;
+  padding: 20px;
+  background-color: #141414;
+  transition: 0.5s ease-in-out;
+}
+
+.nav-link a {
+  color: white;
+  font-weight: 200;
+}
+
+.hamburger {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.bar {
+  width: 20px;
+  height: 2px;
+  background-color: #fff;
+  display: block;
+  transition: 0.3s;
+}
+
+.bar.active:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.bar.active:nth-child(2) {
+  opacity: 0;
+}
+
+.bar.active:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.nav-link-open {
+  right: 0;
+  transition: 0.5s ease-in-out;
+}
+
+.section-hero {
+  width: 100%;
+  background-color: #141414;
+  color: white;
+  padding: 25px 0;
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-items: center;
+  gap: 20px;
+}
+
+.release {
+  font-size: 12px;
+}
+
+.release span {
+  color: #818181;
+}
+
+.movie-poster {
+  width: 100%;
+  text-align: center;
+}
+
+.poster {
+  width: 150px;
+}
+
+.movie-desc {
+  grid-column: 1/3;
+}
+
+.desc-title {
+  margin-bottom: 10px;
+}
+
+.desc {
+  font-size: 18px;
+}
+
+/* SECTION CATEGORY */
+
+.section-category {
+  width: 100%;
+  background-color: #141414;
+  color: white;
+  padding: 25px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 25px;
+}
+
+.section-sub-title {
+  text-align: center;
+  margin-top: 10px;
+  color: #818181;
+  font-size: 12px;
+}
+
+.category {
+  padding-top: 25px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.category-item {
+  width: 60px;
+}
+
+.category-img {
+  width: 100%;
+}
+
+.category-name {
+  padding-top: 5px;
+  text-align: center;
+}
+
+/* POPULAR SECTION */
+.section-popular {
+  padding: 25px 0;
+}
+
+.movies {
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.movie-card {
+  position: relative;
+}
+
+.movies-item {
+  width: 100px;
+}
+
+.movie-thumb {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.movie-card-title {
+  text-align: center;
+  font-size: 15px;
+}
+
+.rate {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #edbf17;
+  padding: 5px;
+  color: white;
+  border-bottom-left-radius: 5px;
+  font-size: 8px;
+}
+
+.rate span {
+  color: black;
+  font-weight: 800;
+}
+
+footer {
+  width: 100%;
+  padding: 15px 0;
+  background-color: #edbf17;
+  text-align: center;
+}
+
+/* DESKTOP VERSION */
+
+@media only screen and (min-width: 768px) {
+  .container {
+    margin: 0 50px;
+  }
+
+  .nav-link {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    position: unset;
+  }
+
+  .nav-link a {
+    color: white;
+    font-weight: 200;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .hero-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .movie-detail {
+    font-size: 35px;
+  }
+
+  .release {
+    font-size: 20px;
+  }
+
+  .poster {
+    width: 80%;
+  }
+
+  .movie-desc {
+    grid-column: 3;
+  }
+
+  .section-category {
+    padding: 6em 0;
+  }
+
+  .category {
+    justify-content: space-between;
+  }
+
+  .section-title {
+    font-size: 35px;
+  }
+
+  .section-sub-title {
+    font-size: 15px;
+  }
+
+  .category-item {
+    width: 100px;
+  }
+
+  .movies {
+    gap: 25px 5em;
+  }
+
+  .movies-item {
+    width: 300px;
+  }
+
+  .movie-card-title {
+    font-size: 20px;
+  }
+
+  .rate {
+    font-size: 15px;
+  }
+}
+
