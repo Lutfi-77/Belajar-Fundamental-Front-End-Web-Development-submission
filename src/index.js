@@ -1,4 +1,4 @@
-import api from "./scripts/api";
+import movieService from "./scripts/api";
 import AppBar from "./component/app-bar";
 import "./styles/style.css";
 
@@ -13,4 +13,4 @@ hamburger.addEventListener("click", () => {
   });
 });
 
-api();
+movieService();

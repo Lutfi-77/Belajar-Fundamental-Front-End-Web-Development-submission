@@ -1,4 +1,4 @@
-function api() {
+const movieService = () => {
   const url = "https://api.themoviedb.org/3/";
   const key = "c67d750d553f2a633ba6465ef442abb8";
 
@@ -59,6 +59,6 @@ function api() {
     getMovieHero();
     getPopularMovie();
   });
-}
+};
 
-export default api;
+export default movieService;
